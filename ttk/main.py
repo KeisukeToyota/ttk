@@ -14,5 +14,22 @@ def host2ip(host):
         host = urlparse(host).netloc
         ip = socket.gethostbyname(host)
     if ip == '0.0.0.0':
-        raise AttributeError('It is neither IP nor URL...')
+        raise AttributeError('It is neither Host nor URL...')
     return ip
+
+def menu():
+    print('''
+    {1} host2ip : Find IP from Host or URL
+    ''')
+    
+    select_num = input('>>> ')
+
+    if select_num is '1':
+        host = input('>>> Host or URL : ')
+        ip = host2ip(host)
+        print(ip)
+    else:
+        exit()
+
+if __name__ == '__main__':
+    menu()
