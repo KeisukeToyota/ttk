@@ -10,6 +10,7 @@ def menu():
         print('''
         {1} host2ip : Find IP from Host or URL
         {2} wifi_scan : WiFi spot scan
+        {3} conect_wifi : Conect WiFi
         {99} Exit
         ''')
 
@@ -23,7 +24,12 @@ def menu():
         elif select_num == '2':
             print('\n' + wifi_scan() + '\n')
             input('Enter continue...')
-        elif select_num in ['99', 'exit']:
+        elif select_num == '3':
+            ssid = input('>>> SSID : ')
+            password = input('>>> Password : ')
+            conect_wifi(ssid, password)
+            input('Enter continue...')
+        elif select_num in ['99', 'exit', 'quit']:
             print('bye!')
             break
 

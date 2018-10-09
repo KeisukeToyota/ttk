@@ -1,6 +1,7 @@
 import socket
 from urllib.parse import urlparse
 import subprocess
+import os
 
 def host2ip(host):
     try:
@@ -23,3 +24,6 @@ def sniffer():
     s = socket.socket(socket.AF_INET, socket.SOCK_RAW, socket.IPPROTO_TCP)
     while True:
         print(s.recvfrom(65565))
+
+def conect_wifi(ssid=None, password=None):
+    os.system('networksetup -setairportnetwork en0 {} {}'.format(ssid, password))
