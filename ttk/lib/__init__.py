@@ -1,1 +1,1 @@
-from .network import wifi_scan, host2ip, conect_wifi
+from .network import wifi_scan, host2ip, connect_wifi
