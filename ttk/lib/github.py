@@ -18,6 +18,7 @@ def all_repo_clone(target, org, page):
     res = json.loads(res_cmd(cmd))
     for r in res:
         os.system(f"cd {org} && git clone {r['html_url']}")
+        print()
 
 def all_repo_pull(dir_path):
     for d in filter(lambda x: os.path.isdir(x), os.listdir(dir_path)):
