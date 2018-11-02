@@ -26,7 +26,7 @@ def sniffer():
         print(s.recvfrom(65565))
 
 def connect_wifi(ssid=None, password=None):
-    output = subprocess.getoutput('networksetup -setairportnetwork en0 {} {}'.format(ssid, password))
+    output = subprocess.getoutput(f"networksetup -setairportnetwork en0 {ssid} {password}")
     if output == '':
         result = 'Connection success!!'
     else:
