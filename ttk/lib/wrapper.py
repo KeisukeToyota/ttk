@@ -24,9 +24,9 @@ def wrap_all_repo_clone():
     pages = int(input('get page count : '))
     for page in range(1, pages + 1):
         all_repo_clone(target, org, page)
-    input('Enter continue...')
+    input('\nEnter continue...\n')
 
 def wrap_all_repo_pull():
     dir_path = input('Directory path : ')
     all_repo_pull(dir_path)
-    input('Enter continue...')
+    input('\nEnter continue...\n')
