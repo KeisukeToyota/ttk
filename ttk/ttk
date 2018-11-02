@@ -13,16 +13,19 @@ def clear_screen():
     os.system('clear')
 
 def menu():
+    print('''
+    {1} host2ip : Find IP from Host or URL
+    {2} wifi_scan : WiFi spot scan
+    {3} connect_wifi : Conect WiFi
+    {4} all_repo_clone : Github account repository clone
+    {5} all_repo_pull : Github account repository pull
+    {99} Exit
+    ''')
+
+def main():
     while True:
         clear_screen()
-        print('''
-        {1} host2ip : Find IP from Host or URL
-        {2} wifi_scan : WiFi spot scan
-        {3} connect_wifi : Conect WiFi
-        {4} all_repo_clone : Github account repository clone
-        {5} all_repo_pull : Github account repository pull
-        {99} Exit
-        ''')
+        menu()
         select_num = input('>>> ')
         try:
             MENUS[select_num]()
@@ -30,4 +33,4 @@ def menu():
             continue
 
 if __name__ == '__main__':
-    menu()
+    main()

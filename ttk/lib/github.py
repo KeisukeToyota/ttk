@@ -21,7 +21,7 @@ def all_repo_clone(target, org, page):
         print()
 
 def all_repo_pull(dir_path):
-    for d in filter(lambda x: os.path.isdir(x), os.listdir(dir_path)):
+    for d in filter(lambda x: os.path.isdir(os.path.join(dir_path, x)), os.listdir(dir_path)):
         print(d)
-        os.system(f"cd {d} && git pull")
+        os.system(f"cd {os.path.join(dir_path, d)} && git pull")
         print()
