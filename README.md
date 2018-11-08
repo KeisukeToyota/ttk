@@ -5,3 +5,9 @@ Toyota's Tool Kit
 # enviroment
 Python : 3.6.5  
 OS : macOS
+
+# install
+```shell
+$ ./install
+$ source ~/.zshrc # or ~/.bash_profile
+```
