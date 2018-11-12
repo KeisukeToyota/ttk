@@ -9,9 +9,6 @@ MENUS = {
     'exit' : exit, 'clear' : clear_screen,
 }
 
-def clear_screen():
-    os.system('clear')
-
 def menu():
     print('''
     {1} host2ip : Find IP from Host or URL
