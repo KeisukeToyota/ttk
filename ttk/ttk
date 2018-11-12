@@ -6,7 +6,7 @@ MENUS = {
     '1' : wrap_host2ip, '2' : wrap_wifi_scan,
     '3' : wrap_connect_wifi, '4' : wrap_all_repo_clone,
     '5' : wrap_all_repo_pull, '99' : exit,
-    'exit' : exit
+    'exit' : exit, 'clear' : clear_screen,
 }
 
 def clear_screen():
